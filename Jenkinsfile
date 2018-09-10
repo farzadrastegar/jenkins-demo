@@ -18,7 +18,7 @@ throttle(['throttleDocker']) {
             },
             "functional": {
               sh '''
-                ./ci/test/functional.sh
+                #./ci/test/functional.sh
               '''
             }
           )
