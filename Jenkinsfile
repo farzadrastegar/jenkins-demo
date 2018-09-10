@@ -31,8 +31,8 @@ throttle(['throttleDocker']) {
         stage('Deploy to Kubernetes') {
           sh '''
             version=$(date +%Y%m%d%H%M)
-            ./cd/publish.sh prod dtr.caleb.boxboat.net $version
-            ./cd/deploy-kube.sh prod dtr.caleb.boxboat.net $version
+            ./cd/publish.sh prod registry.yaas-k8s-cluster.com:5000 $version
+            ./cd/deploy-kube.sh prod registry.yaas-k8s-cluster.com:5000 $version
           '''
         }
       }
