@@ -25,7 +25,7 @@ throttle(['throttleDocker']) {
         }
         stage('Capacity Test') {
           sh '''
-            ./ci/test/stress.sh
+            #./ci/test/stress.sh
           '''
         }
         stage('Deploy to Kubernetes') {
